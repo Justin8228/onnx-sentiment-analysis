@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres
+    container_name: sentiment-db
+    restart: always
+    environment:
+      POSTGRES_USER: sentiment
+      POSTGRES_PASSWORD: passwort123
+      POSTGRES_DB: sentiment_db
+    ports:
+      - "5432:5432"
+
+  app:
+    image: justin8228/onnx-sentiment-analysis:latest
+    container_name: sentiment-app
+    restart: always
+    depends_on:
+      - db
+    environment:
+      DB_HOST: db
+      DB_USER: sentiment
+      DB_PASS: passwort123
+      DB_NAME: sentiment_db
+    ports:
+      - "5000:5000"

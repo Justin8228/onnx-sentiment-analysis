@@ -1,5 +1,5 @@
-# docker build -t mosazhaw/onnx-sentiment-analysis .
-# docker run --name onnx-sentiment-analysis -p 9000:5000 -d mosazhaw/onnx-sentiment-analysis
+# docker build -t justin8228/onnx-sentiment-analysis .
+# docker run --name onnx-sentiment-analysis -p 9000:5000 -d justin8228/onnx-sentiment-analysis
 
 FROM python:3.12.7
 

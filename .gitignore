@@ -161,3 +161,5 @@ cython_debug/
 # Project
 *onnx
 model-download
+
+onnx-sentiment-analysis/
